@@ -37,7 +37,7 @@ public class MyStep {
 
     @Когда("^заполняются поля:$")
     public void fillForm(DataTable fields) throws InterruptedException {
-        ipotekaPage.scroll();
+       /*ipotekaPage.scroll();*/
         ipotekaPage.goFrame();
         fields.asMap(String.class, String.class)
                 .forEach((field, value) -> {

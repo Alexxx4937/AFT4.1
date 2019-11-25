@@ -58,8 +58,13 @@ public void  goFrame() throws InterruptedException {
 
 public void
 scroll() throws InterruptedException {
-    jse.executeScript("window.scrollBy(0,1550)");
+    jse.executeScript("window.scrollBy(0,300)");
     Thread.sleep(1000);
+
+    }
+    public void scrollUp() throws InterruptedException {
+        jse.executeScript("window.scrollBy(0,-600)");
+        Thread.sleep(1000);
 
     }
 
@@ -84,13 +89,15 @@ scroll() throws InterruptedException {
 
 
     public void offSalaryCard() throws InterruptedException {
-
+        outFrame();
+        scroll();
+        goFrame();
 
         if(driver.findElement(By.xpath("//input[@data-test-id='paidToCard']")).isSelected()) {
             salaryCard.click();
 
         }
-        Thread.sleep(1000);
+        Thread.sleep(1500);
     }
 
 
@@ -106,13 +113,17 @@ scroll() throws InterruptedException {
 
 
    public void onYoungFamily() throws InterruptedException {
+
+       outFrame();
+       scroll();
+       goFrame();
        if(!driver.findElement(By.xpath("//input[@data-test-id='youngFamilyDiscount']")).isSelected()) {
            youngFamily.click();
 
        }
 
-           Thread.sleep(1000);
-
+           Thread.sleep(1500);
+       
 
 
    }
