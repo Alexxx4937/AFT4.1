@@ -89,9 +89,7 @@ scroll() throws InterruptedException {
 
 
     public void offSalaryCard() throws InterruptedException {
-        outFrame();
-        scroll();
-        goFrame();
+
 
         if(driver.findElement(By.xpath("//input[@data-test-id='paidToCard']")).isSelected()) {
             salaryCard.click();
@@ -114,16 +112,14 @@ scroll() throws InterruptedException {
 
    public void onYoungFamily() throws InterruptedException {
 
-       outFrame();
-       scroll();
-       goFrame();
+
        if(!driver.findElement(By.xpath("//input[@data-test-id='youngFamilyDiscount']")).isSelected()) {
            youngFamily.click();
 
        }
 
            Thread.sleep(1500);
-       
+
 
 
    }

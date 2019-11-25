@@ -54,6 +54,9 @@ public class MyStep {
 
     @Когда("^снять галочку есть зарплатная карта сбербанка$")
     public void снятьГалочкуЕстьЗарплатнаяКартаСбербанка() throws InterruptedException {
+        ipotekaPage.outFrame();
+        ipotekaPage.scroll();
+        ipotekaPage.goFrame();
         ipotekaPage.offSalaryCard();
     }
 
@@ -66,7 +69,9 @@ public class MyStep {
 }
     @Когда("^выставляем галочку молодая семья$")
     public void выставляемГалочкуМолодаяСемья() throws InterruptedException {
-
+        ipotekaPage.outFrame();
+        ipotekaPage.scroll();
+        ipotekaPage.goFrame();
 
         ipotekaPage.onYoungFamily();
     }
