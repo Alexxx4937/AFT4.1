@@ -58,6 +58,7 @@ public class MyStep {
         ipotekaPage.scroll();
         ipotekaPage.goFrame();
         ipotekaPage.offSalaryCard();
+
     }
 
     @Когда("^ожидание появления есть возможность подтвердить доход справкой$")
@@ -74,6 +75,9 @@ public class MyStep {
         ipotekaPage.goFrame();
 
         ipotekaPage.onYoungFamily();
+        ipotekaPage.outFrame();
+        ipotekaPage.scrollUp();
+        ipotekaPage.goFrame();
     }
 
 
